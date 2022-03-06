@@ -1,0 +1,288 @@
+:root,
+body.body--light{
+--base00: #1e1f23;
+--base01: #282a2e;
+--base02: #373b41;
+--base03: #969896;
+--base04: #b4b7b4;
+--base05: #c5c8c6;
+--base06: #e0e0e0;
+--base08: #cc6666;
+--base09: #de935f;
+--base0A: #f0c674;
+--base0B: #b5bd68;
+--base0C: #8abeb7;
+--base0D: #81a2be;
+--base0E: #b294bb;
+--base0F: #a3685a;
+
+--q-primary:#b5bd68;
+--q-secondary:#b5bd68; 
+--q-accent: #8abeb7;
+--q-positive:#21ba45; 
+--q-negative:#c10015;
+--q-info:#b294bb;
+--q-warning:#cc6666;
+--q-dark: #b5bd6;
+  
+}
+
+body{
+  background-color: #282a2e;
+  color: #e0e0e0;
+}
+
+.q-avatar__content, .q-avatar img:not(.q-icon):not(.q-img__image){
+  object-fit: cover;
+}
+
+.q-list,
+.q-field__label{
+  color: unset;
+  
+}
+
+.q-field__native{
+  color: #e0e0e0;
+}
+
+.q-field__control::before{
+  border-bottom-color: #e0e0e0;
+}
+
+code{
+  background-color: #1e1f23;
+  color: #b5bd68;
+}
+
+.q-layout > .flex{
+  display: grid;
+  grid-template-areas: 
+    "aside main";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 320px 1fr;
+  align-items: start;
+  padding-bottom: 100px;
+}
+
+.flex .sm\:flex{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: auto;
+  padding: 0;
+  z-index: 1;
+  background-color: var(--base01);
+  box-sizing: border-box;
+}
+
+.flex .sm\:flex .q-card{
+  width: 100%;
+  border-radius: 0;
+}
+
+.flex .sm\:flex .q-list{
+  display: grid;
+
+}
+
+.flex .sm\:flex .q-item{
+  font-size: 0;
+  justify-items: start;
+  justify-content: start;
+  grid-template-columns: auto auto;
+  height: 0;
+  padding: 0 1em;
+  min-height: unset;
+}
+
+.flex .sm\:flex .q-item{
+  justify-items: end;
+  justify-content: end;
+   grid-auto-flow: dense;
+}
+
+.flex .sm\:flex .q-list:hover .q-item{
+  font-size: 14px;
+  
+  
+}
+
+.flex .sm\:flex .q-list:not(:hover)::before{
+  content: "≡";
+  font-family: "Courier New";
+  font-size: 34px;
+  line-height: 1;
+  text-align: right;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: .5rem;
+  z-index: -1;
+}
+
+.flex .sm\:flex .q-item.q-router-link--exact-active,
+.flex .sm\:flex .q-list:hover .q-item{
+  font-size: 14px;
+  height: 48px;
+}
+
+
+.q-item__section--side>.q-icon {
+    font-size: 0;
+}
+
+.flex .sm\:flex .q-item.q-router-link--exact-active .q-item__section--side>.q-icon,
+.flex .sm\:flex .q-list:hover .q-item__section--side>.q-icon{
+    font-size: 18px;
+}
+
+.q-item__section--avatar {
+  min-width: unset;
+  padding: 0;
+  display: grid;
+  
+}
+
+.flex .sm\:flex .q-list .q-item__section--avatar{
+  grid-column: 2;
+}
+
+.q-page .q-item__section--avatar{
+  align-self: start;
+  grid-template-rows: 20px 40px 1fr;
+}
+
+.q-page .q-item__section--avatar .q-avatar{
+  grid-row: 2;
+}
+
+
+
+.flex .sm\:flex .q-card__section{
+  display: none;
+}
+
+.flex .lg\:w-2\/4{
+  grid-area: main;
+  width: auto;
+  padding: 0;
+}
+
+.flex .lg\:flex{
+  grid-area: aside;
+  width: auto;
+  position: sticky;
+  top: 0;
+  
+}
+
+.flex .lg\:flex .q-list{
+  height: calc(100vh - 100px);
+  overflow: scroll;
+  padding-bottom: 100px;
+  padding-top: 1em;
+}
+.flex .lg\:flex .q-list .q-item{
+  padding: 2px 0;
+}
+
+.flex .lg\:flex > .q-card,
+.px-4{
+  padding: 0;
+}
+
+.q-item{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 0;
+  align-items: center;
+  grid-gap: 1em;
+  padding-right: 1em;
+}
+
+.q-page .q-item__section--main{
+  margin-top: 20px;
+}
+
+.q-item__label.ellipsis{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 1em;
+}
+
+.q-item__label > .flex{
+  display: flex;
+}
+
+.q-dialog {
+  color: black;
+}
+
+.text-base{
+  font-size: 18px;
+}
+
+.text-base p{
+  display: block;
+  text-justify: left;
+}
+
+.text-base a{
+  color: var(--base0B)
+}
+
+.text-base img{
+  margin: .5em 0;
+}
+
+.has-reply,
+.is-reply{
+  position: relative;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-self: center;
+  min-height: 1em;
+  width: 1px;
+}
+
+.has-reply{
+  background: #666;
+  grid-row: 3;
+}
+
+.is-reply{
+  background: #999;
+  grid-row: 1;
+}
+
+.q-page > .text-xl{
+  margin-top: 1em;
+  font-size: 2em;
+  text-align: left;
+}
+
+.q-page > .q-card{
+  max-width: 600px;
+}
+
+.q-page > .q-card .q-card__section{
+  padding: 0;
+}
+
+.q-page .q-infinite-scroll .my-4{
+  padding: 0 0 1em 0;
+  margin: 0;
+  border-bottom: 1px solid var(--base02);
+}
+
+.q-page .q-infinite-scroll .w-full{
+  transform: translateX(0);
+}
+
+.px-1.py-4{
+  padding: 0;
+  padding-right: 1em;
+}
